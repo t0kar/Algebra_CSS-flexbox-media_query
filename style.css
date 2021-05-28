@@ -1,0 +1,40 @@
+@media screen and (max-width: 600px) {
+    .container .box {
+        flex-basis: 100%;
+        margin: 8px;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .container .box {
+        flex-basis: calc(50% - 2 * 16px);
+        margin: 16px;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .container .box {
+        flex-basis: calc(33.33% - 2 * 32px);
+        margin: 32px;
+    }
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.container .box {
+    width: 1 1 auto;
+    transition: margin 1s linear ;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    border: 8px solid blue;
+    background: yellow;
+    border-radius: 32px;
+}
